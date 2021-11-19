@@ -3,7 +3,7 @@ import os
 word = win32.gencache.EnsureDispatch('Word.Application')
 #启动word对象应用
 word.Visible = False
-path = r'D:\\WWW\\GitBase\\ArticleCheck\\file'
+path = r'./file'
 files = []
 for filename in os.listdir(path):
     filename = os.path.join(path,filename)

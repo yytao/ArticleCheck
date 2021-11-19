@@ -1,4 +1,4 @@
 .vscode/
-*.xls
-*.xlsx
+.xls
+.xlsx
 tempCodeRunnerFile.py
