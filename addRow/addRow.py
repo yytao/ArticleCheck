@@ -1,13 +1,16 @@
 from docx import Document
 
 
-document = Document('./199-235.docx')
+document = Document('./result.docx')
 
 for paragraph in document.paragraphs:
     if "所属行业" in paragraph.text:
-        paragraph.insert_paragraph_before("第一参赛者姓名：")
-        paragraph.insert_paragraph_before("现所在国家/地区：")
-
-document.save('./new_artical.docx')
+        t1 = paragraph.insert_paragraph_before("")
+        t2 = paragraph.insert_paragraph_before("")
+        
+        t1.add_run('第一参赛者姓名：').bold = True
+        t2.add_run('现所在国家/地区：').bold = True
+        
+document.save('./new/result.docx')
 
 
